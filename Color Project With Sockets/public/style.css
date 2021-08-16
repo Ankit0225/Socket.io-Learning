@@ -1,0 +1,13 @@
+.container{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    /* align-self: center; */
+    align-items: center;
+}
+.colorbox{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    margin: 10px;
+}
