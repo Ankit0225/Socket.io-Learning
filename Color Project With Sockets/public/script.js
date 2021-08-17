@@ -13,5 +13,11 @@ function colorthebox(color) {
 
 document.getElementById('Colorit').onclick = function () {
  const color = document.getElementById('selectedcolor').value
- colorthebox(color)  
+//  colorthebox(color)  
+
+socket.emit('Colorit', {color})
 }
+
+socket.on('Colorit', (data) => {
+    colorthebox(data.color)
+})
