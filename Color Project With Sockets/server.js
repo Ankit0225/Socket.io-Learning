@@ -12,6 +12,12 @@ app.use(express.static(__dirname + '/public'))
 
 io.on('connection',(socket) => {
     console.log('Connected to =', socket.id);
+
+    socket.on('Colorit', (data) => {
+        // console.log('ColorIt Event Recieved', data);
+        // io.emit() sends data to everyone
+        io.emit('Colorit', data)
+    })
 })
 
 server.listen('5000',() => {
